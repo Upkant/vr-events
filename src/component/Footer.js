@@ -16,6 +16,9 @@ const Footer = () => {
                   <div className="link-wrap">
                     <ul>
                       <li>
+                        <Link href="/">Home</Link>
+                      </li>
+                      <li>
                         <Link href="/about">About</Link>
                       </li>
                       <li>
@@ -26,12 +29,12 @@ const Footer = () => {
                       </li>
                     </ul>
                     <ul>
-                      <li>
+                      {/* <li>
                         <a href="/">Gallery</a>
                       </li>
                       <li>
                         <Link href="/">Home</Link>
-                      </li>
+                      </li> */}
                       {/* <li>
                         <a href="contact.html">Contact</a>
                       </li> */}

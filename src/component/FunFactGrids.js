@@ -1,7 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import Odometer from "react-odometerjs";
-import "odometer/themes/odometer-theme-default.css";
+import CountUp from "react-countup";
 
 const FunFactGrids = () => {
   const [counts, setCounts] = useState({
@@ -14,7 +13,7 @@ const FunFactGrids = () => {
   useEffect(() => {
     // Simulate fetching data or some async operation
     setCounts({
-      happyCouples: 12,
+      happyCouples: 5,
       locations: 150,
       weddings: 300,
       decorations: 500,
@@ -29,9 +28,9 @@ const FunFactGrids = () => {
             <img src="/assets/images/funfact/1.svg" alt="Happy Couples" />
           </div>
           <h3>
-            <Odometer value={counts.happyCouples} format="d" />+
+            <CountUp end={counts.happyCouples} duration={2} />+
           </h3>
-          <p>Experiences</p>
+          <p>Years of Experiences</p>
         </div>
       </div>
       <div className="grid">
@@ -40,7 +39,7 @@ const FunFactGrids = () => {
             <img src="/assets/images/funfact/2.svg" alt="Locations" />
           </div>
           <h3>
-            <Odometer value={counts.locations} format="d" />+
+            <CountUp end={counts.locations} duration={2} />+
           </h3>
           <p>Corporate Events</p>
         </div>
@@ -51,7 +50,7 @@ const FunFactGrids = () => {
             <img src="/assets/images/funfact/3.svg" alt="Weddings" />
           </div>
           <h3>
-            <Odometer value={counts.weddings} format="d" />+
+            <CountUp end={counts.weddings} duration={2} />+
           </h3>
           <p>Weddings</p>
         </div>
@@ -62,7 +61,7 @@ const FunFactGrids = () => {
             <img src="/assets/images/funfact/4.svg" alt="Decorations" />
           </div>
           <h3>
-            <Odometer value={counts.decorations} format="d" />+
+            <CountUp end={counts.decorations} duration={2} />+
           </h3>
           <p>Happy Clients</p>
         </div>

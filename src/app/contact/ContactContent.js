@@ -402,13 +402,6 @@ const ContactContent = () => {
                       )}
                     </button>
                   </div>
-                  <div className="clearfix error-handling-messages">
-                    <div id="success">Thank you</div>
-                    <div id="error">
-                      Error occurred while sending email. Please try again
-                      later.
-                    </div>
-                  </div>
                 </form>
               </div>
             </div>

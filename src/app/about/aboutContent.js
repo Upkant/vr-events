@@ -3,7 +3,7 @@ import Link from "next/link";
 import AboutSection from "../home/AboutSection";
 import ClientReviews from "@/component/reviews/ClientReviews";
 import { servicesData } from "../service/ServiceCards";
-// import FunFactGrids from "@/component/FunFactGrids";
+import FunFactGrids from "@/component/FunFactGrids";
 
 const AboutContent = () => {
   return (
@@ -32,7 +32,7 @@ const AboutContent = () => {
         <div className="container">
           <div className="row">
             <div className="col col-xs-12">
-              {/* <FunFactGrids /> */}
+              <FunFactGrids />
             </div>
           </div>
         </div>
@@ -75,7 +75,7 @@ const AboutContent = () => {
 
       <ClientReviews />
 
-      <section className="wpo-team-section-s2 section-padding">
+      {/* <section className="wpo-team-section-s2 section-padding">
         <div className="container">
           <div className="wpo-section-title">
             <span>Our Organizer</span>
@@ -166,7 +166,7 @@ const AboutContent = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       <section className="wpo-partners-section section-padding pt-0">
         <h2 className="hidden">Partners</h2>

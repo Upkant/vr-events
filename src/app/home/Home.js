@@ -4,7 +4,8 @@ import HiroSection from "./HiroSection";
 import ClientReviews from "@/component/reviews/ClientReviews";
 import AboutSection from "./AboutSection";
 import ServiceSection from "./ServiceSection";
-// import FunFactGrids from "@/component/FunFactGrids";
+import ContactHome from "./ContactHome";
+import FunFactGrids from "@/component/FunFactGrids";
 
 const Home = () => {
   return (
@@ -75,7 +76,9 @@ const Home = () => {
       <section className="wpo-fun-fact-section section-padding-counter">
         <div className="container">
           <div className="row">
-            <div className="col col-xs-12">{/* <FunFactGrids /> */}</div>
+            <div className="col col-xs-12">
+              <FunFactGrids />
+            </div>
           </div>
         </div>
       </section>
@@ -97,102 +100,7 @@ const Home = () => {
                     <div className="wpo-section-title">
                       <h2>Make an Inquiry</h2>
                     </div>
-                    <form
-                      method="post"
-                      className="contact-validation-active"
-                      id="contact-form-main"
-                    >
-                      <div className="row">
-                        <div className="col-lg-6 col-md-6 col-12">
-                          <input
-                            type="text"
-                            className="form-control"
-                            name="name"
-                            id="name"
-                            placeholder="Name"
-                          />
-                        </div>
-                        <div className="col-lg-6 col-md-6 col-12">
-                          <input
-                            type="email"
-                            className="form-control"
-                            name="email"
-                            id="email"
-                            placeholder="Email"
-                          />
-                        </div>
-                        <div className="col-lg-6 col-md-6 col-12">
-                          <input
-                            type="text"
-                            className="form-control"
-                            name="phone"
-                            id="phone"
-                            placeholder="Phone"
-                          />
-                        </div>
-                        <div className="date col-lg-6 col-md-6 col-12">
-                          <input
-                            className="form-control"
-                            name="date"
-                            autoComplete="off"
-                            type="text"
-                            id="datepicker"
-                            placeholder="Wedding Date"
-                          />
-                        </div>
-                        <div className="col-lg-6 col-md-6 col-12">
-                          <select name="guest" className="form-control">
-                            <option disabled="disabled" selected="">
-                              Number Of Guests
-                            </option>
-                            <option>01</option>
-                            <option>02</option>
-                            <option>03</option>
-                            <option>04</option>
-                            <option>05</option>
-                          </select>
-                        </div>
-                        <div className="col-lg-6 col-md-6 col-12">
-                          <select name="meal" className="form-control last">
-                            <option disabled="disabled" selected="">
-                              Meal Preferences
-                            </option>
-                            <option>Chicken Soup</option>
-                            <option>Motton Kabab</option>
-                            <option>Chicken BBQ</option>
-                            <option>Mix Salad</option>
-                            <option>Beef Ribs </option>
-                          </select>
-                        </div>
-                        <div className="col-lg-12 col-md-12 col-12">
-                          <div className="fullwidth">
-                            <textarea
-                              className="form-control"
-                              name="note"
-                              id="note"
-                              placeholder="Message..."
-                              defaultValue={""}
-                            />
-                          </div>
-                        </div>
-                      </div>
-                      <div className="submit-area">
-                        <button type="submit" className="theme-btn">
-                          Send An Inquiry
-                        </button>
-                        <div id="c-loader">
-                          <i className="ti-reload" />
-                        </div>
-                      </div>
-                      <div className="clearfix error-handling-messages">
-                        <div id="success">Thank you</div>
-                        <div id="error">
-                          {" "}
-                          Error occurred while sending email. Please try again
-                          later.
-                        </div>
-                      </div>
-                    </form>
+                    <ContactHome />
                   </div>
                 </div>
               </div>
@@ -222,9 +130,9 @@ const Home = () => {
                   </div>
                   <div className="wpo-blog-content">
                     <ul>
-                      <li>
+                      {/* <li>
                         By <a href="/">Robertson Doe</a>
-                      </li>
+                      </li> */}
                       <li>25 Sep 2023</li>
                     </ul>
                     <h2>
@@ -245,9 +153,9 @@ const Home = () => {
                   </div>
                   <div className="wpo-blog-content">
                     <ul>
-                      <li>
-                        By <a href="/">David Luis</a>
-                      </li>
+                      {/* <li>
+                        By <Link href="/">David Luis</Link>
+                      </li> */}
                       <li>23 Sep 2023</li>
                     </ul>
                     <h2>
@@ -266,9 +174,9 @@ const Home = () => {
                   </div>
                   <div className="wpo-blog-content">
                     <ul>
-                      <li>
+                      {/* <li>
                         By <Link href="/">Aliana de</Link>
-                      </li>
+                      </li> */}
                       <li>21 Sep 2023</li>
                     </ul>
                     <h2>
