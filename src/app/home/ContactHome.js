@@ -250,6 +250,9 @@ const ContactHome = () => {
                 </option>
               ))}
             </select>
+            {errors.services && (
+              <div className="invalid-feedback">{errors.services}</div>
+            )}
           </div>
           <div className="col-lg-12 col-md-12 col-12">
             <input
