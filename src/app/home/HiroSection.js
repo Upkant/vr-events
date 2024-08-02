@@ -1,5 +1,5 @@
 "use client";
-import React, { useRef, useState } from "react";
+import React, { useRef } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
@@ -8,13 +8,17 @@ import "swiper/css/pagination";
 import { Autoplay, Pagination } from "swiper/modules";
 import { carouselHeroData } from "./carouselHeroData";
 
-const heroSection = () => {
+const HiroSection = () => {
   const progressCircle = useRef(null);
   const progressContent = useRef(null);
+
   const onAutoplayTimeLeft = (s, time, progress) => {
-    progressCircle.current.style.setProperty("--progress", 1 - progress);
-    progressContent.current.textContent = `${Math.ceil(time / 1000)}s`;
+    if (progressCircle.current && progressContent.current) {
+      progressCircle.current.style.setProperty("--progress", 1 - progress);
+      progressContent.current.textContent = `${Math.ceil(time / 1000)}s`;
+    }
   };
+
   return (
     <div>
       <section className="wpo-hero-slider wpo-hero-slider-s2">
@@ -22,7 +26,6 @@ const heroSection = () => {
         <div className="swiper-container">
           <Swiper
             spaceBetween={10}
-            // centeredSlides={true}
             autoplay={{
               delay: 2500,
               disableOnInteraction: false,
@@ -38,9 +41,7 @@ const heroSection = () => {
               <SwiperSlide className="swiper-slide" key={slide.id}>
                 <div
                   className="slide-inner slide-bg-image"
-                  style={{
-                    backgroundImage: `url(${slide.backgroundImage})`,
-                  }}
+                  style={{ backgroundImage: `url(${slide.backgroundImage})` }}
                 >
                   <div className="container-fluid">
                     <div className="row align-items-center">
@@ -75,7 +76,7 @@ const heroSection = () => {
                               src="/assets/images/slider/shape11.svg"
                               alt=""
                             />
-                          </div>{" "}
+                          </div>
                           <div className="shape-2">
                             <img
                               src="/assets/images/slider/shape12.svg"
@@ -89,7 +90,6 @@ const heroSection = () => {
                 </div>
               </SwiperSlide>
             ))}
-
             <div className="autoplay-progress" slot="container-end">
               <svg viewBox="0 0 48 48" ref={progressCircle}>
                 <circle cx="24" cy="24" r="20"></circle>
@@ -97,9 +97,6 @@ const heroSection = () => {
               <span ref={progressContent}></span>
             </div>
           </Swiper>
-
-          {/* end swiper-wrapper */}
-          {/* swipper controls */}
           <div className="swiper-pagination" />
         </div>
       </section>
@@ -107,4 +104,4 @@ const heroSection = () => {
   );
 };
 
-export default heroSection;
+export default HiroSection;

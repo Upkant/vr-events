@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import HeroSection from "./heroSection";
+import HiroSection from "./HiroSection";
 import ClientReviews from "@/component/reviews/ClientReviews";
 import AboutSection from "./AboutSection";
 import ServiceSection from "./ServiceSection";
@@ -10,7 +10,7 @@ const Home = () => {
   return (
     <div>
       {/* start of hero */}
-      <HeroSection />
+      <HiroSection />
       {/* end of hero slider */}
 
       {/* start wpo-about-section */}

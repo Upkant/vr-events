@@ -13,9 +13,11 @@ const ServiceSection = () => {
               {servicesData
                 .filter((service) => service.id >= 1 && service.id <= 6)
                 .map((service) => (
-                  <div className="col-lg-4 col-md-6 col-sm-6 col-12 mb-4">
+                  <div
+                    key={service.id}
+                    className="col-lg-4 col-md-6 col-sm-6 col-12 mb-4"
+                  >
                     <div
-                      key={service.id}
                       className="wpo-service-item wow fadeInUp"
                       data-wow-duration={service.duration}
                     >
@@ -37,8 +39,7 @@ const ServiceSection = () => {
               Know More
             </Link>
           </div>
-        </div>{" "}
-        {/* end container */}
+        </div>
       </section>
     </div>
   );

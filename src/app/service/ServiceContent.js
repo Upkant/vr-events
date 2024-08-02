@@ -39,9 +39,11 @@ const ServiceContent = () => {
           <div className="wpo-service-wrap">
             <div className="row">
               {servicesData.map((service) => (
-                <div className="col-lg-3 col-md-6 col-sm-6 col-12 mb-4 mt-4">
+                <div
+                  key={service.id}
+                  className="col-lg-3 col-md-6 col-sm-6 col-12 mb-4 mt-4"
+                >
                   <div
-                    key={service.id}
                     className="wpo-service-item wow fadeInUp"
                     data-wow-duration={service.duration}
                   >
