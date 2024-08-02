@@ -3,15 +3,11 @@ import { NextResponse } from "next/server";
 import nodemailer from "nodemailer";
 
 export async function POST(request) {
-  // Debugging: Log the request method and headers
-  console.log("Request method:", request.method);
-  console.log("Request headers:", JSON.stringify(request.headers));
-
   // Read the request body
   let requestBody;
   try {
     requestBody = await request.json();
-    console.log("Request body successfully read:", requestBody);
+    console.log("Request body:", requestBody);
   } catch (error) {
     console.error("Error reading request body:", error);
     return NextResponse.json(
@@ -47,11 +43,8 @@ export async function POST(request) {
         <meta name="x-apple-disable-message-reformatting">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>New User Enquiry</title>
-        <style type="text/css">
-          body { margin: 0; padding: 0; }
-          table, tr, td { vertical-align: top; border-collapse: collapse; }
-          p { margin: 0; }
-          a { color: #0000ee; text-decoration: underline; }
+        <style>
+          /* Your email styles here */
         </style>
       </head>
       <body style="margin: 0; padding: 0; background-color: #e7e7e7; color: #000000;">
