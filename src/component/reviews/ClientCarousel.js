@@ -32,12 +32,12 @@ const ClientCarousel = () => {
               <div className="wpo-testimonial-text">
                 <p>{clientReview.text}</p>
                 <div className="wpo-testimonial-text-btm">
-                  <div className="tsm-img">
+                  {/* <div className="tsm-img">
                     <img
                       src={clientReview.clientImage}
                       alt={clientReview.clientName}
                     />
-                  </div>
+                  </div> */}
                   <h3>{clientReview.clientName}</h3>
                   <span>{clientReview.function}</span>
                 </div>

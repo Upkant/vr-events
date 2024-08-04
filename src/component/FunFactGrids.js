@@ -13,7 +13,7 @@ const FunFactGrids = () => {
   useEffect(() => {
     // Simulate fetching data or some async operation
     setCounts({
-      happyCouples: 5,
+      happyCouples: 12,
       locations: 150,
       weddings: 300,
       decorations: 500,

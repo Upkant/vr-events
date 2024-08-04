@@ -15,11 +15,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        <link
-          rel="shortcut icon"
-          type="image/png"
-          href="/assets/images/favicon.png"
-        />
+        <link rel="icon" type="image/jpeg" href="/assets/images/vr-logo.jpg" />
         <link href="/assets/css/themify-icons.css" rel="stylesheet" />
         <link href="/assets/css/font-awesome.min.css" rel="stylesheet" />
         <link href="/assets/css/flaticon.css" rel="stylesheet" />

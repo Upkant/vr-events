@@ -28,9 +28,6 @@ const slide = () => {
             <img src="/assets/images/partners/1.png" alt="" />
           </div>
         </SwiperSlide>
-        <SwiperSlide>Slide 2</SwiperSlide>
-        <SwiperSlide>Slide 3</SwiperSlide>
-        <SwiperSlide>Slide 4</SwiperSlide>
       </Swiper>
     </>
   );

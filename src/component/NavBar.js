@@ -4,11 +4,18 @@ import { servicesData } from "@/app/service/ServiceCards";
 import { useState } from "react";
 const NavBar = () => {
   const [isClick, setIsClick] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
+  const [isRotated, setIsRotated] = useState(false);
   const toggleNavBar = () => {
     setIsClick(!isClick);
   };
   const handleCloseNavbar = () => {
     setIsClick(false);
+  };
+
+  const handleToggle = () => {
+    setIsVisible(!isVisible);
+    setIsRotated(!isRotated);
   };
 
   return (
@@ -48,21 +55,39 @@ const NavBar = () => {
                   <i className="ti-close" />
                 </button>
                 <ul className="nav navbar-nav mb-2 mb-lg-0">
-                  <li className="menu-item-has-children">
-                    <Link className="active" href="/">
+                  <li>
+                    <Link
+                      className="active"
+                      href="/"
+                      onClick={handleCloseNavbar}
+                    >
                       Home
                     </Link>
                   </li>
-                  <li className="menu-item-has-children">
-                    <Link href="/about">About</Link>
+                  <li>
+                    <Link href="/about" onClick={handleCloseNavbar}>
+                      About
+                    </Link>
                   </li>
 
                   <li className="menu-item-has-children">
-                    <Link href="/service">Services</Link>
-                    <ul className="sub-menu">
+                    <Link
+                      href="/service"
+                      className={isRotated ? "rotate" : ""}
+                      onClick={handleToggle}
+                    >
+                      Services
+                    </Link>
+                    <ul
+                      className="sub-menu"
+                      style={{ display: isVisible ? "block" : "none" }}
+                    >
                       {servicesData.map((service) => (
                         <li key={service.id}>
-                          <Link href={`/service/${service.slug}`}>
+                          <Link
+                            href={`/service/${service.slug}`}
+                            onClick={handleToggle}
+                          >
                             {service.text}
                           </Link>
                         </li>
@@ -70,7 +95,9 @@ const NavBar = () => {
                     </ul>
                   </li>
                   <li>
-                    <Link href="/contact">Contact</Link>
+                    <Link href="/contact" onClick={handleCloseNavbar}>
+                      Contact
+                    </Link>
                   </li>
                 </ul>
               </div>

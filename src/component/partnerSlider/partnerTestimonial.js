@@ -35,27 +35,7 @@ const partnerTestimonial = () => {
                     <img src="/assets/images/partners/1.png" alt="" />
                   </div>
                 </SwiperSlide>
-                <SwiperSlide>Slide 2</SwiperSlide>
-                <SwiperSlide>Slide 3</SwiperSlide>
-                <SwiperSlide>Slide 4</SwiperSlide>
               </Swiper>
-              <div className="partner-grids partners-slider owl-carousel">
-                <div className="grid">
-                  <img src="/assets/images/partners/1.png" alt="" />
-                </div>
-                <div className="grid">
-                  <img src="/assets/images/partners/2.png" alt="" />
-                </div>
-                <div className="grid">
-                  <img src="/assets/images/partners/3.png" alt="" />
-                </div>
-                <div className="grid">
-                  <img src="/assets/images/partners/4.png" alt="" />
-                </div>
-                <div className="grid">
-                  <img src="/assets/images/partners/5.png" alt="" />
-                </div>
-              </div>
             </div>
           </div>
         </div>{" "}
