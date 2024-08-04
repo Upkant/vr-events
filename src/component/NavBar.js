@@ -1,11 +1,13 @@
 "use Client";
 import Link from "next/link";
 import { servicesData } from "@/app/service/ServiceCards";
+import { usePathname } from "next/navigation";
 import { useState } from "react";
 const NavBar = () => {
   const [isClick, setIsClick] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
   const [isRotated, setIsRotated] = useState(false);
+  const pathname = usePathname();
   const toggleNavBar = () => {
     setIsClick(!isClick);
   };
@@ -17,6 +19,10 @@ const NavBar = () => {
     setIsVisible(!isVisible);
     setIsRotated(!isRotated);
   };
+
+  const isServiceActive = servicesData.some(
+    (service) => pathname === `/service/${service.slug}`
+  );
 
   return (
     <div>
@@ -57,15 +63,19 @@ const NavBar = () => {
                 <ul className="nav navbar-nav mb-2 mb-lg-0">
                   <li>
                     <Link
-                      className="active"
                       href="/"
                       onClick={handleCloseNavbar}
+                      className={pathname === "/" ? "active" : ""}
                     >
                       Home
                     </Link>
                   </li>
                   <li>
-                    <Link href="/about" onClick={handleCloseNavbar}>
+                    <Link
+                      href="/about"
+                      onClick={handleCloseNavbar}
+                      className={pathname === "/about" ? "active" : ""}
+                    >
                       About
                     </Link>
                   </li>
@@ -73,7 +83,9 @@ const NavBar = () => {
                   <li className="menu-item-has-children">
                     <Link
                       href="/service"
-                      className={isRotated ? "rotate" : ""}
+                      className={`${isRotated ? "rotate" : ""} ${
+                        isServiceActive ? "active" : ""
+                      }`}
                       onClick={handleToggle}
                     >
                       Services
@@ -95,7 +107,11 @@ const NavBar = () => {
                     </ul>
                   </li>
                   <li>
-                    <Link href="/contact" onClick={handleCloseNavbar}>
+                    <Link
+                      href="/contact"
+                      onClick={handleCloseNavbar}
+                      className={pathname === "/contact" ? "active" : ""}
+                    >
                       Contact
                     </Link>
                   </li>
