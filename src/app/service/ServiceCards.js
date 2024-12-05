@@ -257,12 +257,12 @@ export const servicesData = [
       Welcome to VR Event & Entertainment, where we capture every moment with artistry and precision. Specializing in all types of photography and videography, we are passionate about preserving the essence of your event in stunning visuals. Whether it's a wedding, corporate gathering, or special celebration, our skilled team of photographers and videographers ensure every detail is captured with creativity and professionalism. From candid moments to breath taking portraits, we excel in delivering high-quality images and videos that tell your unique story. Trust us to document your memories with style and grace. Discover the art of visual storytelling with us.
     `,
     additionalImages: [
-      "/assets/images/service-single/2.jpg",
-      "/assets/images/service-single/3.jpg",
-      "/assets/images/service-single/2.jpg",
-      "/assets/images/service-single/3.jpg",
-      "/assets/images/service-single/2.jpg",
-      "/assets/images/service-single/3.jpg",
+      "/assets/events/artist/wedding.png",
+      "/assets/events/artist/haldi.png",
+      "/assets/events/artist/mehndi.png",
+      "/assets/events/artist/cocktail.png",
+      "/assets/events/artist/dj-light.png",
+      "/assets/events/artist/catering.png",
     ],
     additionalServices: [
       "Wedding Ceremony",
@@ -288,12 +288,12 @@ export const servicesData = [
       Welcome to VR Event & Entertainment, your ultimate source for premier entertainment experiences. Whether you're planning a corporate gala, a wedding reception, or a private party, we specialize in curating unforgettable moments with top-notch entertainment. From live bands to DJs, magicians to dancers, our diverse roster of talented performers ensures we match your event's unique vibe and atmosphere. With meticulous attention to detail and a commitment to excellence, we create seamless entertainment solutions that leave a lasting impression on your guests. Elevate your event with us, where entertainment meets excellence and every celebration shines with brilliance.
     `,
     additionalImages: [
-      "/assets/images/service-single/2.jpg",
-      "/assets/images/service-single/3.jpg",
-      "/assets/images/service-single/2.jpg",
-      "/assets/images/service-single/3.jpg",
-      "/assets/images/service-single/2.jpg",
-      "/assets/images/service-single/3.jpg",
+      "/assets/events/artist/wedding.png",
+      "/assets/events/artist/haldi.png",
+      "/assets/events/artist/mehndi.png",
+      "/assets/events/artist/cocktail.png",
+      "/assets/events/artist/dj-light.png",
+      "/assets/events/artist/catering.png",
     ],
     additionalServices: [
       "Wedding Ceremony",
@@ -319,7 +319,7 @@ export const servicesData = [
       Welcome to VR Event & Entertainment, your gateway to the stars. We specialize in connecting you with celebrity artists who elevate your event to extraordinary heights. Whether you're planning a high-profile corporate function, a dazzling gala, or an exclusive private party, our extensive network includes renowned musicians, actors, comedians, and more. With expertise in negotiating contracts and coordinating logistics, we ensure a seamless experience from start to finish. Trust us to bring star power to your event and create unforgettable moments that leave a lasting impression. Partner with us for a celebrity-driven event that exceeds all expectations.
     `,
     additionalImages: [
-      "/assets/events/artist/artsit-sixteen.png",
+      "/assets/events/artist/bollywood-stars.png",
       "/assets/events/artist/artsit-one.png",
       "/assets/events/artist/artsit-two.png",
       "/assets/events/artist/artsit-three.png",

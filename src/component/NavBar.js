@@ -83,9 +83,7 @@ const NavBar = () => {
                   <li className="menu-item-has-children">
                     <Link
                       href="/service"
-                      className={`${isRotated ? "rotate" : ""} ${
-                        isServiceActive ? "active" : ""
-                      }`}
+                      className={isRotated ? "rotate" : ""}
                       onClick={handleToggle}
                     >
                       Services
